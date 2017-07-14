@@ -1,5 +1,28 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+
+
+	html
+
+		title {title}
+			h1= title
+
+		head 
+			link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css')
+			link(rel='stylesheet', href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css')
+		style.
+			body {
+			padding:20px;
+			}
+		body
+
+			.container
+				.jumbotron.text-center
+					h1  Chatty 
+					h2 Your Friendly Chat App	   
+					a.btn.btn-primary(href='/login', style='margin-right:10px')
+						span.fa.fa-user  Log in	   
+					a.btn.btn-primary(href='/signup')
+						span.fa.fa-user  Sign Up
+
